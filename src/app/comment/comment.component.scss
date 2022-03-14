@@ -9,6 +9,6 @@ $light-grey: hsl(223, 19%, 93%);
 $very-lt-grey: hsl(228, 33%, 97%);
 $white: hsl(0, 0%, 100%);
 
-.body {
-  background-color: black;
+.comment-box {
+  background-color: $white;
 }

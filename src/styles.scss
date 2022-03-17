@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 $moderate-blue: hsl(238, 40%, 52%);
 $soft-red: hsl(358, 79%, 66%);
 $light-gray-blue: hsl(239, 57%, 85%);
@@ -9,6 +10,7 @@ $light-grey: hsl(223, 19%, 93%);
 $very-lt-grey: hsl(228, 33%, 97%);
 $white: hsl(0, 0%, 100%);
 
-.body {
-  background-color: black;
+body {
+  background-color: $light-grey;
+  font-family: "Rubik", sans-serif;
 }

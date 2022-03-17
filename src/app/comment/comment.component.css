@@ -1,4 +1,102 @@
 .comment-box {
   background-color: white;
+  width: 800px;
+  height: 175px;
+  border-radius: 10px;
+}
+
+.comment-box .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px;
+}
+
+.comment-box .content-wrapper .number-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  max-height: 95px;
+  min-width: 35px;
+  border-radius: 5px;
+  background-color: #eaecf1;
+}
+
+.comment-box .content-wrapper .number-box .add {
+  cursor: pointer;
+  border: none;
+  background-color: #eaecf1;
+}
+
+.comment-box .content-wrapper .number-box .subtract {
+  cursor: pointer;
+  border: none;
+  background-color: #eaecf1;
+}
+
+.comment-box .content-wrapper .comment-content {
+  padding: 25px;
+}
+
+.comment-box .content-wrapper .comment-content .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 675px;
+}
+
+.comment-box .content-wrapper .comment-content .banner .avatar {
+  height: 30px;
+}
+
+.comment-box .content-wrapper .comment-content .banner .username {
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.comment-box .content-wrapper .comment-content .banner .timestamp {
+  margin-left: 20px;
+  color: #67727e;
+}
+
+.comment-box .content-wrapper .comment-content .banner button {
+  cursor: pointer;
+  margin-left: auto;
+  background-color: white;
+  color: #5457b6;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment-box .content-wrapper .comment-content .banner button .reply {
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.comment-box .content-wrapper .comment-content .comment {
+  margin-top: 15px;
+  width: 650px;
+  color: #67727e;
 }
 /*# sourceMappingURL=comment.component.css.map */

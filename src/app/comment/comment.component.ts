@@ -13,7 +13,24 @@ interface Comment{
     }
     username: string;
   }
+  replies: Reply[];
 }
+
+interface Reply{
+  id: number;
+  content:string;
+  createdAt: string;
+  score: number;
+  replyingTo: string;
+  user: {
+    image: {
+      png: string;
+      webp: string;
+    }
+    username: string;
+  }
+}
+
 
 @Component({
   selector: 'app-comment',
@@ -28,6 +45,6 @@ export class CommentComponent implements OnInit {
   ngOnInit(): void {
   }
 
- comment: Comment[] = CommentData.comments;
+ comments: Comment[] = CommentData.comments;
 
 }

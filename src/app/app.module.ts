@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CommentComponent } from './comment/comment.component';
+import { CommentIndividualComponent } from './comment-individual/comment-individual.component';
+import { CommentFormComponent } from './comment-form/comment-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReplyComponent } from './reply/reply.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommentComponent
+    CommentComponent,
+    CommentIndividualComponent,
+    CommentFormComponent,
+    ReplyComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

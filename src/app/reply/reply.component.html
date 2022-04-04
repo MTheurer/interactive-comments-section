@@ -1,0 +1,30 @@
+<div
+  [ngClass]="{ 'comment-box': toggle, 'reply-box': !toggle }"
+  class="comment-box"
+>
+  <div class="content-wrapper">
+    <div class="number-box">
+      <button class="add">
+        <img src="/assets/images/icon-plus.svg" alt="add" />
+      </button>
+
+      <div class="likes">{{ reply.score }}</div>
+      <button class="subtract">
+        <img src="/assets/images/icon-minus.svg" alt="subtract" />
+      </button>
+    </div>
+    <div class="comment-content">
+      <div class="banner">
+        <img class="avatar" src="/assets/{{ reply.user.image.png }}" alt="" />
+        <div class="username">{{ reply.user.username }}</div>
+        <div class="timestamp">{{ reply.createdAt }}</div>
+
+        <button>
+          <img src="/assets/images/icon-reply.svg" alt="arrow" />
+          <div class="reply">Reply</div>
+        </button>
+      </div>
+      <div class="comment">@{{ reply.replyingTo }} {{ reply.content }}</div>
+    </div>
+  </div>
+</div>

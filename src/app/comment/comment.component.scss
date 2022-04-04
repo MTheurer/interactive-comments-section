@@ -9,73 +9,13 @@ $light-grey: hsl(223, 19%, 93%);
 $very-lt-grey: hsl(228, 33%, 97%);
 $white: hsl(0, 0%, 100%);
 
-.comment-box {
-  background-color: $white;
-  width: 800px;
-  height: 175px;
-  border-radius: 10px;
-  .content-wrapper {
-    display: flex;
-    margin: 25px;
-    .number-box {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: space-around;
-      align-items: center;
-      margin-top: 30px;
-      max-height: 95px;
-      min-width: 35px;
-      border-radius: 5px;
-      background-color: $light-grey;
-      .add {
-        cursor: pointer;
-        border: none;
-        background-color: $light-grey;
-      }
-      .subtract {
-        cursor: pointer;
-        border: none;
-        background-color: $light-grey;
-      }
-    }
-    .comment-content {
-      padding: 25px;
-      .banner {
-        display: flex;
-        align-items: center;
-        width: 675px;
-        .avatar {
-          height: 30px;
-        }
-        .username {
-          margin-left: 15px;
-          font-weight: 500;
-        }
-        .timestamp {
-          margin-left: 20px;
-          color: $gray-blue;
-        }
-        button {
-          cursor: pointer;
-          margin-left: auto;
-          background-color: $white;
-          color: $moderate-blue;
-          border: none;
-          display: flex;
-          align-items: center;
-          .reply {
-            margin-left: 5px;
-            font-weight: bold;
-            font-size: 16px;
-          }
-        }
-      }
-      .comment {
-        margin-top: 15px;
-        width: 650px;
-        color: $gray-blue;
-      }
-    }
+.component-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 775px;
+  .reply {
+    width: 2px;
+    background-color: hsl(232, 17%, 91%);
+    margin-left: 40px;
   }
 }

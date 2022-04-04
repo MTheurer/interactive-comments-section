@@ -1,29 +1,15 @@
-<div class="comment-box" *ngFor="let comment of comments">
-  <div class="content-wrapper">
-    <div class="number-box">
-      <button class="add">
-        <img src="/assets/images/icon-plus.svg" alt="add" />
-      </button>
-
-      <div class="likes">{{ comment.score }}</div>
-      <button class="subtract">
-        <img src="/assets/images/icon-minus.svg" alt="subtract" />
-      </button>
-    </div>
-    <div class="comment-content">
-      <div class="banner">
-        <img class="avatar" src="/assets/{{ comment.user.image.png }}" alt="" />
-        <div class="username">{{ comment.user.username }}</div>
-        <div class="timestamp">{{ comment.createdAt }}</div>
-
-        <button>
-          <img src="/assets/images/icon-reply.svg" alt="arrow" />
-          <div class="reply">Reply</div>
-        </button>
-      </div>
-      <div class="comment">
-        {{ comment.content }}
-      </div>
-    </div>
-  </div>
+<div class="component-wrapper">
+  <ng-container *ngFor="let comment of comments">
+    <app-comment-individual [comment]="comment"> </app-comment-individual>
+    <app-reply
+      [replyMessage]="replyToggle"
+      class="reply"
+      *ngFor="let reply of comment.replies"
+      [reply]="reply"
+    ></app-reply>
+  </ng-container>
+  <app-comment-form
+    submitLabel="Send"
+    (submitHandler)="addComment({ text: $event, parentId: null })"
+  ></app-comment-form>
 </div>

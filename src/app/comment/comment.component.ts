@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import CommentData from '../../assets/data.json';
+import { Component, OnInit, Input} from '@angular/core';
+import {CommentServiceService} from '../comment-service.service'
+import { ReplyComponent } from '../reply/reply.component';
 
 interface Comment{
   id: number;
@@ -38,13 +39,21 @@ interface Reply{
   styleUrls: ['./comment.component.scss']
 })
 export class CommentComponent implements OnInit {
-
-  constructor() { 
+  comments: Comment[] = []
+  replies: Reply[] = []
+  @Input() currentUserId!: string;
+  replyToggle: string = 'true';
+  constructor(private commentService: CommentServiceService) { 
   }
 
   ngOnInit(): void {
+    this.comments = this.commentService.getData();
   }
 
- comments: Comment[] = CommentData.comments;
-
+addComment({text, parentId}: {text: string, parentId: null|string}): void{
+console.log('addComment', text, parentId)
+/*this.commentService.createComment(text, parentId).subscribe((createdComment) => {
+  this.comments = [...this.comments, createdComment];
+});*/
+}
 }
